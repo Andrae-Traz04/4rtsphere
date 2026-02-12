@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Feed from "./components/Feed";
+import Profile from "./components/Profile";
+import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState(null);
+  const [view, setView] = useState("login");
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
+  if (!user) {
+    return view === "login" ? (
+      <Login onLogin={setUser} onSwitch={() => setView("register")} />
+    ) : (
+      <Register onRegister={setUser} onSwitch={() => setView("login")} />
+    );
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <header className="top-bar">
+        <h1 onClick={() => setView("feed")}>ArtSphere</h1>
+        <button onClick={() => setView("profile")}>Profile</button>
+      </header>
+
+      {view === "feed" && (
+        <Feed onViewProfile={(profile) => {
+          setSelectedProfile(profile);
+          setView("viewProfile");
+        }} />
+      )}
+
+      {view === "profile" && <Profile user={user} />}
+
+      {view === "viewProfile" && (
+        <Profile user={selectedProfile} isPublic />
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
