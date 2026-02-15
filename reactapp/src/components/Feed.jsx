@@ -30,7 +30,7 @@ export default function Feed({ onViewProfile }) {
     {
       id: 4,
       user: "Ashleigh Wue",
-      image: "https://scontent.fceb6-4.fna.fbcdn.net/v/t51.82787-15/528423061_18012770621772866_2536109836081788184_n.webp?stp=dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEqcg6NoIgT85iqc8jDAZ2W6RDjdf9TobPpEON1_1Ohs2WvAIhwzykVgFOEjzqfk0wXz57WNQDowm2EreFoFK89&_nc_ohc=-VSDgZ8EAB0Q7kNvwF2drTu&_nc_oc=Adn9ZPrrSJ2t5BhjAHDROzzsVmuP7XtF9vv65XSDvaDU02Jm1EjXF3ae8qeCGIoL9hc&_nc_zt=23&_nc_ht=scontent.fceb6-4.fna&_nc_gid=RF7IuwaW-ca5Qm8RDSADjA&oh=00_Afv1f6IlWkXI6pBGkqEJiYbzbDhP6phk0Y33XtBbtSXLsw&oe=698E1C2A",
+      image: "https://scontent.fmnl9-5.fna.fbcdn.net/v/t51.82787-15/528423061_18012770621772866_2536109836081788184_n.webp?stp=dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEqcg6NoIgT85iqc8jDAZ2W6RDjdf9TobPpEON1_1Ohs2WvAIhwzykVgFOEjzqfk0wXz57WNQDowm2EreFoFK89&_nc_ohc=5qO15d2L1RYQ7kNvwHBx94_&_nc_oc=AdlrDVdgJqR-JvbGoQo71iF7W9KVMa8e387LnwD6Iwf_FfEU3j6GmxXPOlnpP84av2Q&_nc_zt=23&_nc_ht=scontent.fmnl9-5.fna&_nc_gid=DxHwrBie4v9vh0PM77ueaQ&oh=00_AfvmJpDaJLNQK8pweYEJRZZxSs1r-yStjmSt8_Xg698QMQ&oe=69978EEA",
       caption: "Where Sadness Swims",
       likes: 990,
       comments: [],
